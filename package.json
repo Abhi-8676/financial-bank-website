@@ -1,0 +1,21 @@
+{
+  "name": "financial-bank-website",
+  "version": "1.0.0",
+  "description": "Full-stack MERN online banking platform",
+  "main": "server/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd frontend && npm run dev",
+    "build": "concurrently \"npm run build-server\" \"npm run build-client\"",
+    "build-server": "cd server && npm install",
+    "build-client": "cd frontend && npm install && npm run build",
+    "start": "cd server && npm start"
+  },
+  "keywords": ["banking", "mern", "react", "nodejs", "mongodb"],
+  "author": "Abhishek Kumar",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
